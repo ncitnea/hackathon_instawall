@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wall Instagram Hack@thon NC 2017</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-spectragram-1.0.3/spectragram.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script>
+        jQuery('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var recipient = button.data('whatever')
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+    <script>
+        /* Recharge la page toutes les minutes */
+            var time = new Date().getTime();
+
+            function refresh() {
+                if(new Date().getTime() - time >= 60000) 
+                    window.location.reload(true);
+                else 
+                    setTimeout(refresh, 10000);
+            }
+
+            setTimeout(refresh, 10000);
+    </script>
+</head>
+
+<body>
+    <div id="header" class="nav">
+        <div style="
+        font-size: 26px;
+        font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+        max-width: 500px;
+        word-wrap: break-word;
+        color:  #e00;
+        font-weight: bolder;">Participez ! Envoyez vos Instagram d'équipe <u>#Hackmyinstalwall</u></div>
+    </div>
+    <div class="main-content">
+        <!-- <div id="sidebar" class="menu">
+            <ul class="sidebar">
+                <li>
+                    <a class="active" href="#"><i class="fa fa-tachometer"></i> ACCUEIL</a>
+                </li>
+            </ul>
+        </div> -->
+
+        <div id="instagramWall"></div>
+    </div>
+    <script type="text/javascript">
+        $('#instagramWall').spectragram('getRecentTagged');
+    </script>
+
+    <div id="footer" class="footer">
+        <div>Ce mur Instagram a été réalisé par XXX</div>
+    </div>
+</body>
+
+</html>
